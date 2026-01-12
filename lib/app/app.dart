@@ -1,6 +1,8 @@
 import 'package:e_commerce/app/app_colors.dart';
 import 'package:e_commerce/app/app_theme_data.dart';
+import 'package:e_commerce/features/auth/ui/screens/otp_verification_screen.dart';
 import 'package:e_commerce/features/auth/ui/screens/splash_screen.dart';
+import 'package:e_commerce/features/auth/ui/screens/verify_email_screen.dart';
 import 'package:flutter/material.dart';
 
 class CraftyBay extends StatelessWidget {
@@ -13,8 +15,11 @@ class CraftyBay extends StatelessWidget {
       initialRoute: '/',
       theme: AppThemeData.lightThemeData,
       darkTheme: AppThemeData.darkThemeData,
+      themeMode: ThemeMode.light,
       routes: {
-        '/' : (context) => const SplashScreen()
+        '/' : (context) => const SplashScreen(),
+        VerifyEmailScreen.name : (context) => const VerifyEmailScreen(),
+        OtpVerificationScreen.name : (context) => const OtpVerificationScreen(),
       },
     );
   }
